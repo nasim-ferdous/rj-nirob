@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 px-6">
+    <section id="services" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -12,47 +12,47 @@ const Services = () => {
         className="max-w-6xl mx-auto text-center"
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 leading-tight">
             Personalized Services for a Better Life
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {/* Card 1 */}
-            <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10 hover:border-purple-600 transition">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-500">
+            <div className="bg-zinc-900 p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-purple-600 transition duration-300">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-purple-500">
                 Relationship & Family Consultancy
               </h3>
-              <ul className="text-gray-400 space-y-3 text-sm">
-                <li>• Conflict Resolution between partners</li>
-                <li>• Strengthening family bonds</li>
-                <li>• Pre-Marital Counseling</li>
-                <li>• Healing after breakup or divorce</li>
+              <ul className="list-disc list-outside pl-5 text-gray-400 space-y-2 sm:space-y-3 text-sm sm:text-base leading-relaxed text-left">
+                <li>Conflict Resolution between partners</li>
+                <li>Strengthening family bonds</li>
+                <li>Pre-Marital Counseling</li>
+                <li>Healing after breakup or divorce</li>
               </ul>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10 hover:border-purple-600 transition">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-500">
+            <div className="bg-zinc-900 p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-purple-600 transition duration-300">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-purple-500">
                 Life Coaching & Mental Well-being
               </h3>
-              <ul className="text-gray-400 space-y-3 text-sm">
-                <li>• Managing stress and anxiety</li>
-                <li>• Confidence Building</li>
-                <li>• Personal Growth & Goal Setting</li>
-                <li>• Emotional Resilience</li>
+              <ul className="list-disc list-outside pl-5 text-gray-400 space-y-2 sm:space-y-3 text-sm sm:text-base leading-relaxed text-left">
+                <li>Managing stress and anxiety</li>
+                <li>Confidence Building</li>
+                <li>Personal Growth & Goal Setting</li>
+                <li>Emotional Resilience</li>
               </ul>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10 hover:border-purple-600 transition">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-500">
+            <div className="bg-zinc-900 p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-purple-600 transition duration-300">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-purple-500">
                 Creative Media & Brand Consultancy
               </h3>
-              <ul className="text-gray-400 space-y-3 text-sm">
-                <li>• Content Strategy for creators</li>
-                <li>• Video Advertise & Narrative Services</li>
-                <li>• Podcast & Documentary Consultancy</li>
-                <li>• Public Speaking & Communication</li>
+              <ul className="list-disc list-outside pl-5 text-gray-400 space-y-2 sm:space-y-3 text-sm sm:text-base leading-relaxed text-left">
+                <li>Content Strategy for creators</li>
+                <li>Video Advertise & Narrative Services</li>
+                <li>Podcast & Documentary Consultancy</li>
+                <li>Public Speaking & Communication</li>
               </ul>
             </div>
           </div>

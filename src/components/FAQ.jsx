@@ -32,7 +32,7 @@ const FAQ = () => {
   const [open, setOpen] = useState(null);
 
   return (
-    <section id="faq" className="py-32 px-6 ">
+    <section id="faq" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,23 +40,26 @@ const FAQ = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto text-center"
       >
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
+        <div className="max-w-3xl sm:max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 leading-tight">
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-5 md:space-y-6">
             {faqs.map((item, index) => (
               <div
                 key={index}
-                className="border border-white/10 rounded-xl p-6 cursor-pointer"
+                className="border border-white/10 rounded-xl p-4 sm:p-5 md:p-6 cursor-pointer transition duration-300"
                 onClick={() => setOpen(open === index ? null : index)}
               >
-                <h3 className="text-lg font-semibold text-purple-500">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-purple-500 text-left">
                   {item.q}
                 </h3>
+
                 {open === index && (
-                  <p className="text-gray-400 mt-4">{item.a}</p>
+                  <p className="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-left">
+                    {item.a}
+                  </p>
                 )}
               </div>
             ))}

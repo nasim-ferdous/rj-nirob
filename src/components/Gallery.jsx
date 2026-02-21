@@ -15,7 +15,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-32 px-6">
+    <section id="gallery" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,14 +23,14 @@ const Gallery = () => {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto"
       >
-        <h2 className="text-4xl font-bold text-center mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 leading-tight">
           Moments & Media Highlights
         </h2>
 
         <PhotoProvider>
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={30}
+            spaceBetween={20}
             slidesPerView={3}
             loop={true}
             autoplay={{
@@ -38,9 +38,9 @@ const Gallery = () => {
               disableOnInteraction: false,
             }}
             breakpoints={{
-              320: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              320: { slidesPerView: 1, spaceBetween: 15 },
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
           >
             {images.map((img, index) => (
@@ -49,7 +49,7 @@ const Gallery = () => {
                   <img
                     src={img}
                     alt="RJ Nirob"
-                    className="w-full h-60 object-cover rounded-2xl cursor-pointer hover:scale-105 transition duration-500 border border-white/10"
+                    className="w-full h-48 sm:h-56 md:h-60 lg:h-72 object-cover rounded-2xl cursor-pointer hover:scale-105 transition duration-500 border border-white/10"
                   />
                 </PhotoView>
               </SwiperSlide>

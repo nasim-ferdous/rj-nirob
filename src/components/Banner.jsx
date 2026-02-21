@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-24">
+    <section className="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 md:pb-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Text */}
         <motion.div
@@ -22,23 +22,24 @@ const Banner = () => {
             RJ Nirob
           </h1>
 
-          <p className="text-gray-400 text-lg leading-relaxed mb-8">
+          <p className="text-gray-400 text-justify text-lg leading-relaxed mb-8">
             Empowering lives through voice, vision, and empathy. From a
             legendary radio personality to a trusted Life Coach and Relationship
             Consultant, RJ Nirob helps people navigate life’s most complex
             emotional journeys.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a
               href="#contact"
-              className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full text-white"
+              className="w-full sm:w-auto text-center bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full text-white transition duration-300"
             >
               Book a Session
             </a>
+
             <a
               href="#about"
-              className="border border-purple-600 px-6 py-3 rounded-full"
+              className="w-full sm:w-auto text-center border border-purple-600 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-full transition duration-300"
             >
               Learn More
             </a>

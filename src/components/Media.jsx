@@ -57,7 +57,7 @@ const Media = () => {
   ];
 
   return (
-    <section id="media" className="py-32 px-6">
+    <section id="media" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -66,20 +66,25 @@ const Media = () => {
         className="max-w-6xl mx-auto text-center"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 leading-tight">
             Media & Social Presence
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {mediaLinks.map((item, index) => (
               <a
                 key={index}
                 href={item.link}
                 target="_blank"
-                className="flex items-center gap-6 p-6 rounded-2xl border border-white/10 hover:border-purple-600 transition bg-black/40 backdrop-blur-md"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 sm:gap-6 p-4 sm:p-5 md:p-6 rounded-2xl border border-white/10 hover:border-purple-600 transition duration-300 bg-black/40 backdrop-blur-md"
               >
-                <div className="text-3xl text-purple-500">{item.icon}</div>
-                <p className="text-lg text-gray-300">{item.title}</p>
+                <div className="text-2xl sm:text-3xl text-purple-500">
+                  {item.icon}
+                </div>
+                <p className="text-sm sm:text-base md:text-lg text-gray-300 text-left">
+                  {item.title}
+                </p>
               </a>
             ))}
           </div>
